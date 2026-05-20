@@ -1,0 +1,46 @@
+package com.example.appcondominio
+
+import android.content.Intent
+import android.os.Bundle
+import android.widget.Button
+import android.widget.EditText
+import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+
+class MainActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
+        setContentView(R.layout.activity_login)
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            insets
+        }
+        val btnentrar = findViewById<Button>(R.id.btnentrar)
+        btnentrar.setOnClickListener{
+            val email = findViewById<EditText>(R.id.editTextEmailLogin).text.toString()
+            val senha = findViewById<EditText>(R.id.editTextSuasenha).text.toString()
+            if(email.equals("test@teste.com") && senha.equals("1234")) {
+                val intent = Intent(this, PainelActivity::class.java)
+                intent.putExtra("nome", "Peter")
+                startActivity(intent)
+            }
+
+        }
+        val btncadastre = findViewById<Button>(R.id.btncadastre)
+        btncadastre.setOnClickListener {
+            val nome = findViewById<EditText>(R.id.Textname).text.toString()
+            val cpf = findViewById<EditText>(R.id.Textcpf).text.toString()
+            val email = findViewById<EditText>(R.id.Textemail).text.toString()
+            val senha = findViewById<EditText>(R.id.Textsenha).text.toString()
+            val senhaconfirme = findViewById<EditText>(R.id.Textsenhaconfirme).text.toString()
+
+            val intent = Intent(this, CadastroActivity::class.java)
+            startActivity(intent)
+        }
+
+    }
+}
