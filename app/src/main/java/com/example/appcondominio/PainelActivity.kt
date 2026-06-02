@@ -2,6 +2,7 @@ package com.example.appcondominio
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.MenuItem
 import android.widget.Button
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
@@ -28,6 +29,16 @@ class PainelActivity : AppCompatActivity() {
             val intent = Intent(this, BoletoActivity::class.java)
             startActivity(intent)
         }
+        val btnreserva = findViewById<Button>(R.id.buttonReserva)
+        btnreserva.setOnClickListener {
+            val intent = Intent(this, ReservaActivity::class.java)
+            startActivity(intent)
+        }
+
+        
+
+
+
 
     }
 
