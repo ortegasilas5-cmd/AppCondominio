@@ -35,7 +35,7 @@ class PainelActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        
+
 
 
 
