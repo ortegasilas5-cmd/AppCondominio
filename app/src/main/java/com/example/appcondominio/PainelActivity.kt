@@ -35,6 +35,12 @@ class PainelActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val btnautorize = findViewById<Button>(R.id.buttonAutorizar)
+        btnautorize.setOnClickListener {
+            val intent = Intent(this, AutorizacaoActivity::class.java )
+            startActivity(intent)
+        }
+
 
 
 

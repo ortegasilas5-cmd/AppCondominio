@@ -23,6 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginTop="48dp"
+        android:backgroundTint="#009688"
         android:text="Boleto"
         app:layout_constraintEnd_toStartOf="@+id/buttonReserva"
         app:layout_constraintHorizontal_bias="0.136"
@@ -34,6 +35,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="68dp"
+        android:backgroundTint="#009688"
         android:text="Reservas"
         app:layout_constraintBottom_toBottomOf="@+id/buttonboleto"
         app:layout_constraintEnd_toEndOf="parent"
@@ -45,6 +47,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="48dp"
         android:layout_marginTop="44dp"
+        android:backgroundTint="#009688"
         android:text="Autorização"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonboleto" />
@@ -54,6 +57,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="96dp"
+        android:backgroundTint="#009688"
         android:text="Mural"
         app:layout_constraintBottom_toBottomOf="@+id/buttonAutorizar"
         app:layout_constraintEnd_toEndOf="parent"
@@ -71,13 +75,15 @@
         app:layout_constraintEnd_toStartOf="@+id/buttonMudar"
         app:layout_constraintHorizontal_bias="0.32"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonAutorizar" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonAutorizar"
+        android:backgroundTint="#009688" />
 
     <Button
         android:id="@+id/buttonMudar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
+        android:backgroundTint="#009688"
         android:text="Mudanças"
         app:layout_constraintBottom_toBottomOf="@+id/buttonPrestar"
         app:layout_constraintEnd_toEndOf="parent"
@@ -88,6 +94,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="76dp"
+        android:backgroundTint="#009688"
         android:text="Contatos com a portaria"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
