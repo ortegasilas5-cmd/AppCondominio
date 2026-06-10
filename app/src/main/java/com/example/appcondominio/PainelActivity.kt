@@ -1,5 +1,6 @@
 package com.example.appcondominio
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
@@ -11,6 +12,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 class PainelActivity : AppCompatActivity() {
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -21,7 +23,7 @@ class PainelActivity : AppCompatActivity() {
             insets
         }
         val  nome = intent.getStringExtra("nome")
-        val titulo = findViewById<TextView>(R.id.textViewTitulo)
+        val titulo = findViewById<TextView>(R.id.textViewuser)
         titulo.text = "Ola usuário $nome"
 
         val btnboleto = findViewById<Button>(R.id.buttonboleto)
@@ -35,7 +37,7 @@ class PainelActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        val btnautorize = findViewById<Button>(R.id.buttonAutorizar)
+        val btnautorize = findViewById<Button>(R.id.btnautorizo)
         btnautorize.setOnClickListener {
             val intent = Intent(this, AutorizacaoActivity::class.java )
             startActivity(intent)

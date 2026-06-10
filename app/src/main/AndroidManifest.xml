@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCondominio">
         <activity
+            android:name=".ContatoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MudancaActivity"
+            android:exported="false" />
+        <activity
             android:name=".AutorizacaoActivity"
             android:exported="false" />
         <activity

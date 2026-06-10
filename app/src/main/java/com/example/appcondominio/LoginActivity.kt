@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
-class MainActivity : AppCompatActivity() {
+class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -30,15 +30,10 @@ class MainActivity : AppCompatActivity() {
             }
 
         }
-        val btncadastre = findViewById<Button>(R.id.btncadastre)
-        btncadastre.setOnClickListener {
-            val nome = findViewById<EditText>(R.id.Textname).text.toString()
-            val cpf = findViewById<EditText>(R.id.Textcpf).text.toString()
-            val email = findViewById<EditText>(R.id.Textemail).text.toString()
-            val senha = findViewById<EditText>(R.id.Textsenha).text.toString()
-            val senhaconfirme = findViewById<EditText>(R.id.Textsenhaconfirme).text.toString()
+        val cadastre = findViewById<Button>(R.id.btncadastre)
+        cadastre.setOnClickListener {
 
-            val intent = Intent(this, PainelActivity::class.java)
+            val intent = Intent(this, CadastroActivity::class.java)
             startActivity(intent)
         }
 
