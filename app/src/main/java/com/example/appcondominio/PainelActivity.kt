@@ -3,7 +3,6 @@ package com.example.appcondominio
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
-import android.view.MenuItem
 import android.widget.Button
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
@@ -23,8 +22,8 @@ class PainelActivity : AppCompatActivity() {
             insets
         }
         val  nome = intent.getStringExtra("nome")
-        val titulo = findViewById<TextView>(R.id.textViewuser)
-        titulo.text = "Ola usuário $nome"
+        val titular = findViewById<TextView>(R.id.textViewuser)
+        titular.text = "Ola usuário $nome"
 
         val btnboleto = findViewById<Button>(R.id.buttonboleto)
         btnboleto.setOnClickListener {
@@ -37,11 +36,19 @@ class PainelActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        val btnautorize = findViewById<Button>(R.id.btnautorizo)
+        val btnautorize = findViewById<Button>(R.id.buttonAutorizar)
         btnautorize.setOnClickListener {
             val intent = Intent(this, AutorizacaoActivity::class.java )
             startActivity(intent)
         }
+
+        val btnmural = findViewById<Button>(R.id.buttonMural)
+        btnmural.setOnClickListener {
+            val intent = Intent(this, MuralActivity::class.java)
+            startActivity(intent)
+        }
+
+       // val mude = findViewById<Button>()
 
 
 

@@ -7,6 +7,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 class ReservaActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,7 +25,20 @@ class ReservaActivity : AppCompatActivity() {
         setSupportActionBar(toolbarReserva)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowHomeEnabled(true)
+
+        val reservas = listOf(
+            "Academia",
+            "Brinquedoteca",
+            "Churrasqueiras",
+            "Salão de festas",
+            "Salão de jogos"
+        )
+        val rc = findViewById<RecyclerView>(R.id.recyclerViewReserva)
+        rc.layoutManager = LinearLayoutManager(this)
+        rc.adapter = MuralAdpater(reservas )
+
     }
+
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {

@@ -19,13 +19,13 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        val btnentrar = findViewById<Button>(R.id.btnentrar)
-        btnentrar.setOnClickListener{
+        val entre = findViewById<Button>(R.id.btnentrar)
+        entre.setOnClickListener{
             val email = findViewById<EditText>(R.id.editTextEmailLogin).text.toString()
             val senha = findViewById<EditText>(R.id.editTextSuasenha).text.toString()
             if(email.equals("test@teste.com") && senha.equals("1234")) {
+
                 val intent = Intent(this, PainelActivity::class.java)
-                intent.putExtra("nome", "Peter")
                 startActivity(intent)
             }
 

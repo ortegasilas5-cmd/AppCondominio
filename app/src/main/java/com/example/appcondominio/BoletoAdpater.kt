@@ -1,5 +1,4 @@
 package com.example.appcondominio
-
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup

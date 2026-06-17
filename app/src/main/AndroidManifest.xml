@@ -12,6 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCondominio">
         <activity
+            android:name=".MuralAdapter"
+            android:exported="false" />
+        <activity
+            android:name=".MainAdapter"
+            android:exported="false" />
+        <activity
+            android:name=".MuralActivity"
+            android:exported="false" />
+        <activity
             android:name=".ContatoActivity"
             android:exported="false" />
         <activity
@@ -19,9 +28,6 @@
             android:exported="false" />
         <activity
             android:name=".AutorizacaoActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Reserva2Activity"
             android:exported="false" />
         <activity
             android:name=".ReservaActivity"
