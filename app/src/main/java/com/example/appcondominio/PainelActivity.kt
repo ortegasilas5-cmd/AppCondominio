@@ -48,8 +48,17 @@ class PainelActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-       // val mude = findViewById<Button>()
+       val mude = findViewById<Button>(R.id.buttonMudar)
+        mude.setOnClickListener {
+            val intent = Intent(this, MudancaActivity::class.java)
+            startActivity(intent)
+        }
 
+        val btportaria = findViewById<Button>(R.id.buttoncontatoportaria)
+        btportaria.setOnClickListener {
+            val intent = Intent(this, ContatoActivity::class.java)
+            startActivity(intent)
+        }
 
 
 
