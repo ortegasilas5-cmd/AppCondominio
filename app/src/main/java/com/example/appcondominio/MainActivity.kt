@@ -26,7 +26,9 @@ class MainActivity : AppCompatActivity() {
             if(email.equals("test@teste.com") && senha.equals("1234")) {
 
                 val intent = Intent(this, PainelActivity::class.java)
+                intent.putExtra("nome", "Silas")
                 startActivity(intent)
+
             }
 
         }
